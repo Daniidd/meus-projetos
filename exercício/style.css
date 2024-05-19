@@ -1,60 +1,83 @@
 body {
-    margin: 0px; 
-    background-color: #f0f0f0; 
-}
-
-.header {
-    background-color: #21633c;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.logo {
-    font-size: 28px;
-    margin: 0px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    flex-direction: column; /* Adicionado para alinhar o botão abaixo dos cards */
 }
 
 #card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; 
     gap: 20px;
     max-width: 1200px;
-    padding: 20px;
-    margin: 30px auto;
-    background-color: #fff;
+    padding: 20px; 
     border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card {
-    width: calc(24.33% - 10px);
-    border: 1px solid #ccc;
+    width: calc(24.33% - 10px); 
+    border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
-    background-color: #f0f0f0;
 }
 
 .card img {
-    max-width: 200px;
-    height: auto;
+    max-width: 200px; 
+    height: auto; 
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 10px; 
 }
 
 .price-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .price {
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
-.discount {
-    background-color: #229b54;
+.desconto {
+    background-color: rgb(7, 129, 7); 
     color: white;
     padding: 5px 10px;
-    border-radius: 3px; }
+    border-radius: 3px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.preto {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+#dark-mode-botao {
+    background: #444; 
+    border: 2px solid #333; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px; 
+    transition: background 0.3s, transform 0.3s; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+#dark-mode-botao:hover {
+    background: #6a6a6a; 
+    transform: scale(1.05); 
+}
+
+#dark-mode-botao:active {
+    background: #666; 
+    transform: scale(0.95); 
+}
