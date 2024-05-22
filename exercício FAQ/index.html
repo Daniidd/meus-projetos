@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        .pergunta{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="pergunta">O que é HTML?  ▼</h3>
+    <p class="resposta" style="display: none;">HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web. Ele descreve a estrutura de uma página web usando marcações.</p>
+
+    <h3 class="pergunta">O que é CSS?  ▼</h3>
+    <p class="resposta" style="display: none;">CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de documentos escritos em HTML ou XML. Ele controla o layout de múltiplas páginas web ao mesmo tempo.</p>
+
+    <h3 class="pergunta">O que é JavaScript?  ▼</h3>
+    <p class="resposta" style="display: none;">JavaScript é uma linguagem de programação que permite a implementação de funcionalidades complexas em páginas web, como conteúdos dinâmicos, interativos e controlados pelo usuário.</p>
+
+    <h3 class="pergunta">O que são funções de callback em JavaScript?  ▼</h3>
+    <p class="resposta" style="display: none;">Funções de callback são funções passadas como argumento para outra função, que são invocadas dentro da função externa para completar algum tipo de rotina ou ação.</p>
+    
+    <script>
+        var perguntas = document.getElementsByClassName("pergunta");
+
+        for(var i = 0; i < perguntas.length; i++){
+            perguntas[i].addEventListener('click', function(){
+
+           
+            var resposta = this.nextElementSibling; //selecionar o elemento de resposta, que é o próximo elemento irmão (sibling) da pergunta.
+
+            if (resposta.style.display == 'none'){
+                resposta.style.display = 'block'; //mostrar a resposta
+            }else {
+                resposta.style.display = 'none' //esconde a resposta
+            }
+
+        });
+     }
+
+
+    
+
+    </script>
+</body>
+</html>
